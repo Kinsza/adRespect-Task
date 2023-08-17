@@ -1,0 +1,91 @@
+/**
+ * Custom styles to immediately follow Tailwind’s `base` layer
+ *
+ * “Add things like base typography styles [or] opinionated global resets.”
+ *
+ * — from https://tailwindcss.com/docs/plugins#adding-base-styles
+ */
+
+/**
+ * This uses the background and foreground colors declared in the
+ * `theme.json` file and is applied both to the frontend and in the block
+ * editor.
+*/
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap");
+
+
+html {
+	font-size: 1rem;
+	scroll-behavior: smooth;
+}
+
+@media (max-width: 1024px) {
+	html {
+		font-size: 1rem;
+	}
+}
+
+body {
+	@apply bg-background text-primary-400 font-sans;
+}
+
+.container {
+	@apply lg:max-w-[1262px] px-4 mx-auto;
+}
+
+h1 {
+	@apply font-['Montserrat'] text-6xl leading-[4.375rem] font-medium;
+}
+
+h2 {
+	@apply font-['Montserrat'] text-5xl leading-[3.45rem] font-medium;
+}
+
+h3 {
+	@apply font-['Montserrat'] font-medium tracking-[-0.0875rem] text-[1.75rem] leading-[2.0125rem];
+}
+
+h4 {
+	@apply font-['Inter'] text-xs leading-[1.125rem] tracking-[-0.0075rem];
+}
+
+p {
+	@apply font-['Inter'] text-base font-normal;
+}
+/*button-arrow*/
+.btn-arrow {
+	@apply pb-1 border-b border-b-primary-100 font-['Inter'] text-primary-100;
+}
+.btn-arrow svg {
+	@apply align-middle inline-flex;
+}
+/*slider*/
+/*.swiper-slide::before {
+	@apply bg-primary-200 w-1/2 inline-block h-full absolute;
+	content: " ";
+}*/
+.swiper-slide .container:after{
+	content: '';
+	position:absolute;
+	left:0;
+	top:0;
+	height:100%;
+	width:100%;
+	background-color:red;
+	z-index:1;
+  }
+  .swiper-slide .left-col{
+	height:100%;
+	z-index:2;
+	position:relative;
+  }
+  .swiper-slide img{
+	position:absolute;
+	width:50%;
+	height:100%;
+	right:0;
+	top:0;
+	z-index:3;
+	object-fit:cover;
+  }
