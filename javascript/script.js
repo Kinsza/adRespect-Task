@@ -16,7 +16,7 @@ import Swiper, { Navigation } from 'swiper'
 import 'swiper/css'
 import 'swiper/css/navigation'
 
-Fancybox.bind()
+Fancybox.bind();
 
 var macy = Macy({
     container: '#macy-container',
