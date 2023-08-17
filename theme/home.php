@@ -121,9 +121,7 @@ get_header();
 		<?php $galeria_urls = get_field( 'galeria' ); ?>
 	<?php if ( $galeria_urls ) :  ?>
 		<?php foreach ( $galeria_urls as $galeria_url ): ?>
-
 			<img data-fancybox="gallery" src="<?php echo esc_url( $galeria_url ); ?>" />
-
 		<?php endforeach; ?>
 	<?php endif; ?>
 
