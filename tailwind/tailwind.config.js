@@ -15,8 +15,9 @@ module.exports = {
 		// Extend the default Tailwind theme.
 		extend: {
 			screens: {
-				'xl': '1262px',
 				'2xl': '1262px',
+				'xl': '1262px'
+
 			},
 			fontSize: {},
 			colors: {
